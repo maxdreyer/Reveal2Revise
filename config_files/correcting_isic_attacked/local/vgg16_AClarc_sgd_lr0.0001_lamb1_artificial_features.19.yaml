@@ -1,0 +1,22 @@
+artifact: artificial
+attacked_classes:
+- MEL
+batch_size: 64
+ckpt_path: checkpoints/checkpoint_vgg16_isic_attacked.pth
+ckpt_path_corrected: checkpoints/vgg16_AClarc_sgd_lr0.0001_lamb1_artificial_features.19/last.ckpt
+data_paths:
+- /data/dataset_isic2019
+dataset_name: isic_attacked
+device: cuda
+img_size: 224
+lamb: 1
+layer_name: features.19
+loss: cross_entropy
+lr: 0.0001
+method: AClarc
+model_name: vgg16
+num_epochs: 10
+optimizer: sgd
+p_artifact: 0.1
+wandb_api_key: your_api_key
+wandb_project_name: your_project_name

@@ -1,0 +1,22 @@
+artifact: artificial
+attacked_classes:
+- 0
+batch_size: 64
+ckpt_path: checkpoints/checkpoint_vgg16_bone_attacked.pth
+ckpt_path_corrected: checkpoints/vgg16_PClarc_sgd_lr0.0001_lamb1_artificial_features.28/last.ckpt
+data_paths:
+- /data/bone
+dataset_name: bone_attacked
+device: cuda
+img_size: 224
+lamb: 1
+layer_name: features.28
+loss: cross_entropy
+lr: 0.0001
+method: PClarc
+model_name: vgg16
+num_epochs: 10
+optimizer: sgd
+p_artifact: 0.5
+wandb_api_key: your_api_key
+wandb_project_name: your_project_name

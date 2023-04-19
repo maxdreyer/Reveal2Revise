@@ -1,0 +1,20 @@
+artifact: ruler
+artifacts_file: data/artifacts_isic.json
+batch_size: 64
+ckpt_path: checkpoints/checkpoint_vgg16_isic_last.pth
+ckpt_path_corrected: checkpoints/checkpoint_vgg16_isic_last.pth
+data_paths:
+- /data/dataset_isic2019
+dataset_name: isic
+device: cuda
+img_size: 224
+lamb: 0.0
+layer_name: features.28
+loss: cross_entropy
+lr: 0.0001
+method: Vanilla
+model_name: vgg16
+num_epochs: 0
+optimizer: sgd
+wandb_api_key: your_api_key
+wandb_project_name: your_project_name

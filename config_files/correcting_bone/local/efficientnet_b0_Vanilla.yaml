@@ -1,0 +1,20 @@
+artifact: big_l
+artifacts_file: data/artifacts_bone.json
+batch_size: 64
+ckpt_path: checkpoints/checkpoint_efficientnet_b0_bone_last.pth
+ckpt_path_corrected: checkpoints/checkpoint_efficientnet_b0_bone_last.pth
+data_paths:
+- /data/bone
+dataset_name: bone
+device: cuda
+img_size: 224
+lamb: 0.0
+layer_name: last_conv
+loss: cross_entropy
+lr: 0.0001
+method: Vanilla
+model_name: efficientnet_b0
+num_epochs: 0
+optimizer: sgd
+wandb_api_key: your_api_key
+wandb_project_name: your_project_name

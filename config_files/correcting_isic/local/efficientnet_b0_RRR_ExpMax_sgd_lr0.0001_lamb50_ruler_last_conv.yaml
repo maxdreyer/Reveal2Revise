@@ -1,0 +1,20 @@
+artifact: ruler
+artifacts_file: data/artifacts_isic.json
+batch_size: 64
+ckpt_path: checkpoints/checkpoint_efficientnet_b0_isic_last.pth
+ckpt_path_corrected: checkpoints/efficientnet_b0_RRR_ExpMax_sgd_lr0.0001_lamb50_ruler_last_conv/last.ckpt
+data_paths:
+- /data/dataset_isic2019
+dataset_name: isic
+device: cuda
+img_size: 224
+lamb: 50
+layer_name: last_conv
+loss: cross_entropy
+lr: 0.0001
+method: RRR_ExpMax
+model_name: efficientnet_b0
+num_epochs: 10
+optimizer: sgd
+wandb_api_key: your_api_key
+wandb_project_name: your_project_name

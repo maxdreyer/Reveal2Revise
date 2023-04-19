@@ -1,0 +1,21 @@
+artifact_type: ch_text
+attacked_classes:
+- MEL
+batch_size: 128
+data_paths:
+- /data/dataset_isic2019
+dataset_name: isic_attacked
+device: cuda
+eval_every_n_epochs: 5
+img_size: 224
+loss: cross_entropy
+lr: 0.005
+model_name: vgg16
+model_savedir: /data/output
+num_epochs: 150
+optimizer: sgd
+p_artifact: 0.8
+pretrained: true
+store_every_n_epochs: 150
+wandb_api_key: your_api_key
+wandb_project_name: your_project_name

@@ -1,0 +1,7 @@
+zennit-crp
+pytorch-lightning
+pandas
+opencv-python
+wandb
+scikit-learn
+albumentations
