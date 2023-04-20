@@ -50,7 +50,7 @@ def main():
     attacked_classes = [0] if "bone" in dataset_name else ["MEL"]
     dirs_by_version = {'2019': "/media/pahde/Data/ISIC2019"} if "isic_combined" in dataset_name else {}
     p_artifact = 1
-    dataset = get_dataset(dataset_name + "_hm")(dirs_by_version=dirs_by_version, path=args.data_path, preprocessing=True, split="test",
+    dataset = get_dataset(dataset_name + "_hm")(dirs_by_version=dirs_by_version, path=args.data_path, normalize_data=True, split="test",
                                             attacked_classes=attacked_classes, fix_artifact=True,
                                             p_artifact=p_artifact)
 
@@ -96,12 +96,12 @@ def main():
             attacked_classes = [1, 2, 3, 4, 5, 6, 7, 8, 9]
             split = "val"
 
-        dataset_attacked = get_ds(path, split=split, preprocessing=False, attacked_classes=attacked_classes,
+        dataset_attacked = get_ds(path, split=split, normalize_data=False, attacked_classes=attacked_classes,
                         p_artifact=1.0, fix_artifact=True)
         data = torch.stack([dataset_attacked[j][0] for j in [sample_id]], dim=0)
         ax[1][2].imshow((data[0]).detach().cpu().permute((1, 2, 0)))
 
-        dataset_attacked = get_ds(path, split=split, preprocessing=False, attacked_classes=attacked_classes,
+        dataset_attacked = get_ds(path, split=split, normalize_data=False, attacked_classes=attacked_classes,
                         p_artifact=0.0, fix_artifact=True)
 
 

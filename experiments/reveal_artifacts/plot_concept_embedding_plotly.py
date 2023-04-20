@@ -83,7 +83,7 @@ def get_args(fixed_arguments: List[str] = []):
 args = get_args(fixed_arguments=["layer_name"])
 
 dataset = get_dataset(args.dataset_name)(data_paths=args.data_paths,
-                                         preprocessing=True,
+                                         normalize_data=True,
                                          split="train")
 
 model = get_fn_model_loader(model_name=args.model_name)(n_class=len(dataset.class_names),
@@ -101,7 +101,7 @@ layer_map = {layer: cc for layer in layer_names}
 attribution = CondAttribution(model)
 
 cache = ImageCache()
-ds = get_dataset(args.dataset_name)(data_paths=args.data_paths, preprocessing=False, split="train")
+ds = get_dataset(args.dataset_name)(data_paths=args.data_paths, normalize_data=False, split="train")
 fv = FeatureVisualization(attribution, ds, layer_map, path=f"crp_files/{args.config_name}")  # TODO: make cache work
 
 

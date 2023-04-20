@@ -46,7 +46,7 @@ def main():
 
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-    dataset = get_dataset(dataset_name)(data_paths=args.data_paths, preprocessing=False, split="train")
+    dataset = get_dataset(dataset_name)(data_paths=args.data_paths, normalize_data=False, split="train")
 
     model = get_fn_model_loader(model_name)(n_class=len(dataset.class_names),
                                             ckpt_path=args.ckpt_path_corrected).to(device)
