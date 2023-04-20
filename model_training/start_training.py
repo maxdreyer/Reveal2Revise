@@ -133,6 +133,7 @@ def start_training(config, config_name):
                                                   image_size=img_size,
                                                   binary_target=binary_target, 
                                                   attacked_classes=[],
+                                                  artifact_type=artifact_type,
                                                   p_artifact=p_artifact)
 
         all_classes = dataset.class_names if "isic" in dataset_name else range(len(dataset.class_names))
@@ -141,6 +142,7 @@ def start_training(config, config_name):
                                                      image_size=img_size,
                                                      binary_target=binary_target, 
                                                      attacked_classes=all_classes,
+                                                     artifact_type=artifact_type,
                                                      p_artifact=p_artifact)
 
         dataset_val_clean = dataset_clean.get_subset_by_idxs(dataset.idxs_val)
