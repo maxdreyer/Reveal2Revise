@@ -78,3 +78,11 @@ class BoneAttackedDataset(BoneDataset):
             image = self.augmentation(image)
 
         return image.float(), bone_age
+
+    def get_subset_by_idxs(self, idxs):
+        subset = super().get_subset_by_idxs(idxs)
+        subset.artifact_labels = self.artifact_labels[np.array(idxs)]
+        subset.artifact_ids = np.where(subset.artifact_labels)[0]
+        subset.sample_ids_by_artifact = {"artificial": subset.artifact_ids}
+        subset.clean_sample_ids = [i for i in range(len(subset)) if i not in subset.artifact_ids]
+        return subset

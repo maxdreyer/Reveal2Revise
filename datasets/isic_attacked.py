@@ -79,3 +79,12 @@ class ISICAttackedDataset(ISICDataset):
         columns = self.metadata.columns.to_list()
         target = torch.Tensor([columns.index(row[row == 1.0].index[0]) - 1 if self.train else 0]).long()[0]
         return img, target
+
+    def get_subset_by_idxs(self, idxs):
+        subset = super().get_subset_by_idxs(idxs)
+        subset.artifact_labels = self.artifact_labels[np.array(idxs)]
+
+        subset.artifact_ids = np.where(subset.artifact_labels)[0]
+        subset.sample_ids_by_artifact = {"artificial": subset.artifact_ids}
+        subset.clean_sample_ids = [i for i in range(len(subset)) if i not in subset.artifact_ids]
+        return subset
