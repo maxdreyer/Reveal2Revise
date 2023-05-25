@@ -80,9 +80,8 @@ Secondly, the datasets need to be downloaded. To do so, download and extract the
 mkdir datasets
 cd datasets
 wget https://isic-challenge-data.s3.amazonaws.com/2019/ISIC_2019_Training_Input.zip
-wget https://isic-challenge-data.s3.amazonaws.com/2019/ISIC_2019_Training_GroundTruth.zip
+wget https://isic-challenge-data.s3.amazonaws.com/2019/ISIC_2019_Training_GroundTruth.csv
 unzip ISIC_2019_Training_Input.zip
-unzip ISIC_2019_Training_GroundTruth.zip
 ```
 
 Then, we need to download the Bone Age Estimation dataset. To do so, run:
