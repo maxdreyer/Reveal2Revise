@@ -5,3 +5,5 @@ opencv-python
 wandb
 scikit-learn
 albumentations
+dash
+dash_bootstrap_components
