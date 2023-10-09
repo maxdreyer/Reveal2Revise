@@ -1,5 +1,5 @@
 <div align="center">
-<img src="static/r2r_logo_300px_alternative_color.png" width="250" alt="R2R Logo" />
+<img src="static/r2r_logo_updated.png" width="250" alt="R2R Logo" />
 <h1>Reveal to Revise: An Explainable AI Life Cycle for Iterative Bias Correction of Deep Models</h1>
 <p>
 PyTorch</p>
