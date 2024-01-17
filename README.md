@@ -6,6 +6,7 @@ PyTorch</p>
 </div>
 
 [![arXiv](https://img.shields.io/badge/arXiv-2303.12641-b31b1b.svg)](https://arxiv.org/abs/2303.12641)
+[![springer](https://img.shields.io/badge/MICCAI_2023-paper-blue.svg)](https://link.springer.com/chapter/10.1007/978-3-031-43895-0_56)
 
 [//]: # ([![pytorch]&#40;https://img.shields.io/badge/pytorch-1.8.1-ee4c2c.svg&#41;]&#40;https://pytorch.org/&#41;)
 
@@ -45,11 +46,30 @@ as well as synthetic variants in a controlled setting.
 Please feel free to cite our work, if used in your research:
 
 ```bibtex
-@article{pahde2023reveal,
-  title={Reveal to Revise: An Explainable AI Life Cycle for Iterative Bias Correction of Deep Models},
-  author={Pahde, Frederik and Dreyer, Maximilian and Samek, Wojciech and Lapuschkin, Sebastian},
-  journal={arXiv preprint arXiv:2303.12641},
-  year={2023}
+@inproceedings{pahde2023reveal,
+  author       = {Frederik Pahde and
+                  Maximilian Dreyer and
+                  Wojciech Samek and
+                  Sebastian Lapuschkin},
+  editor       = {Hayit Greenspan and
+                  Anant Madabhushi and
+                  Parvin Mousavi and
+                  Septimiu Salcudean and
+                  James Duncan and
+                  Tanveer F. Syeda{-}Mahmood and
+                  Russell H. Taylor},
+  title        = {Reveal to Revise: An Explainable {AI} Life Cycle for Iterative Bias
+                  Correction of Deep Models},
+  booktitle    = {Medical Image Computing and Computer Assisted Intervention - {MICCAI}
+                  2023 - 26th International Conference, Proceedings, Part {II}},
+  series       = {Lecture Notes in Computer Science},
+  volume       = {14221},
+  pages        = {596--606},
+  publisher    = {Springer},
+  year         = {2023},
+  url          = {https://doi.org/10.1007/978-3-031-43895-0\_56},
+  doi          = {10.1007/978-3-031-43895-0\_56},
+}
 }
 ```
 
